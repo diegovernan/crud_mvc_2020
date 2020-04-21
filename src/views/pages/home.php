@@ -3,7 +3,9 @@
 <div class="container">
     <h1 class="text-center">CRUD - MVC -2020</h1>
 
-    <table class="table">
+    <a href="#" class="btn btn-sm btn-primary mb-2">Adicionar</a>
+
+    <table class="table table-sm table-striped" id="table">
         <thead>
             <tr>
                 <th>ID</th>
