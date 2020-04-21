@@ -1,13 +1,31 @@
 <?php $render('header'); ?>
 
-<h1>Home</h1>
+<div class="container">
+    <h1 class="text-center">CRUD - MVC -2020</h1>
 
-<ul>
-    <?php foreach ($users as $user) : ?>
-        <li><?=$user['name'];?></li>
-    <?php endforeach; ?>
-</ul>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
 
-<a href="<?= $base ?>/about">About</a>
+        <tbody>
+            <?php foreach ($users as $user) : ?>
+                <tr>
+                    <td><?= $user['id']; ?></td>
+                    <td><?= $user['name']; ?></td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">Editar</button>
+                        <button class="btn btn-sm btn-danger">Excluir</button>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
+</div>
 
 <?php $render('footer'); ?>
