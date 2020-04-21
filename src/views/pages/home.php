@@ -8,7 +8,6 @@
     <?php endforeach; ?>
 </ul>
 
-
 <a href="<?= $base ?>/about">About</a>
 
 <?php $render('footer'); ?>
