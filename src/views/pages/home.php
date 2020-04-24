@@ -20,7 +20,7 @@
                     <td><?= $user['id']; ?></td>
                     <td><?= $user['name']; ?></td>
                     <td>
-                        <button class="btn btn-sm btn-warning">Editar</button>
+                        <a href="<?= $base ?>/edit/<?= $user['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
                         <button class="btn btn-sm btn-danger">Excluir</button>
                     </td>
                 </tr>

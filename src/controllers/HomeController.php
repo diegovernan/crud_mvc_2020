@@ -28,9 +28,11 @@ class HomeController extends Controller
         $this->redirect('/');
     }
 
-    public function edit($args)
+    public function edit($id)
     {
-        print_r($args);
+        $user = User::select()->where('id', $id)->first();
+
+        $this->render('edit', ['user' => $user]);
     }
 
     public function about()
