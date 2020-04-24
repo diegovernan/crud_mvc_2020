@@ -35,6 +35,15 @@ class HomeController extends Controller
         $this->render('edit', ['user' => $user]);
     }
 
+    public function update($id)
+    {
+        $name = filter_input(INPUT_POST, 'name');
+
+        User::update(['name' => $name])->where('id', $id)->execute();
+
+        $this->redirect('/');
+    }
+
     public function about()
     {
         $this->render('about');
