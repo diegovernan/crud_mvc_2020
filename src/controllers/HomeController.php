@@ -44,6 +44,13 @@ class HomeController extends Controller
         $this->redirect('/');
     }
 
+    public function delete($id)
+    {
+        User::delete()->where('id', $id)->execute();
+
+        $this->redirect('/');
+    }
+
     public function about()
     {
         $this->render('about');
