@@ -1,7 +1,5 @@
 # CRUD - MVC - 2020
 
-> [Query Builder](https://github.com/ClanCats/Hydrahon)
-
 ## Instalação (localhost)
 Clonar o projeto
 ```bash
@@ -21,3 +19,5 @@ Configurar arquivo `src/Config.php`
 
 ## Utilização
 Acessar `localhost/crud-mvc-2020/public`
+
+> Documentação da Query Builder [aqui](https://github.com/ClanCats/Hydrahon)
