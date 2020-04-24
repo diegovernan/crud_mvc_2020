@@ -1,4 +1,6 @@
-# CRUD - MVC - 2020 (construção)
+# CRUD - MVC - 2020
+
+> [Query Builder](https://github.com/ClanCats/Hydrahon)
 
 ## Instalação (localhost)
 Clonar o projeto
