@@ -21,7 +21,7 @@
                     <td><?= $user['name']; ?></td>
                     <td>
                         <a href="<?= $base ?>/edit/<?= $user['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
-                        <a href="<?= $base ?>/delete/<?= $user['id'] ?>" class="btn btn-sm btn-danger">Excluir</a>
+                        <a href="<?= $base ?>/delete/<?= $user['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza?')">Excluir</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
