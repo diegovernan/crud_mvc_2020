@@ -3,10 +3,10 @@
 <div class="container">
     <h1 class="text-center">Adicionar</h1>
 
-    <form method="post" action="">
+    <form method="post" action="<?= $base ?>/store">
         <div class="form-group">
             <label for="name">Nome</label>
-            <input type="text" class="form-control" id="name">
+            <input type="text" class="form-control" id="name" name="name">
         </div>
 
         <div>

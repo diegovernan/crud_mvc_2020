@@ -19,6 +19,15 @@ class HomeController extends Controller
         $this->render('create');
     }
 
+    public function store()
+    {
+        $name = filter_input(INPUT_POST, 'name');
+
+        User::insert(['name' => $name])->execute();
+
+        $this->redirect('/');
+    }
+
     public function edit($args)
     {
         print_r($args);
