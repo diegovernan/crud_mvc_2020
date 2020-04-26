@@ -1,6 +1,11 @@
 # CRUD - MVC - 2020
 
+## Informações
+
+CRUD feito como exemplo utilizando a estrutura [MVC - 2020](https://github.com/diegovernan/mvc_2020)
+
 ## Instalação (localhost)
+
 Clonar o projeto
 ```bash
 $ git clone git@github.com:diegovernan/crud_mvc_2020.git
@@ -18,6 +23,7 @@ Importar arquivo `crud-mvc-2020.sql`
 Configurar arquivo `src/Config.php`
 
 ## Utilização
+
 Acessar `localhost/crud-mvc-2020/public`
 
 > Documentação da Query Builder [aqui](https://github.com/ClanCats/Hydrahon)
