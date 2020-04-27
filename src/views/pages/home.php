@@ -27,12 +27,13 @@
                         </td>
                     </tr>
                 <?php endforeach; ?>
-                <?php else : ?>
-                    <tr><td colspan="4" class="text-center">Não há usuários cadastrados</td></tr>
-                <?php endif; ?>
-            </tbody>
+            <?php else : ?>
+                <tr>
+                    <td colspan="4" class="text-center">Não há usuários cadastrados</td>
+                </tr>
+            <?php endif; ?>
+        </tbody>
     </table>
-
 </div>
 
 <?php $render('footer'); ?>
