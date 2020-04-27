@@ -9,8 +9,8 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>E-mail</th>
                 <th>Nome</th>
+                <th>E-mail</th>
                 <th>Ações</th>
             </tr>
         </thead>
@@ -21,6 +21,7 @@
                     <tr>
                         <td><?= $user['id']; ?></td>
                         <td><?= $user['name']; ?></td>
+                        <td><?= $user['email']; ?></td>
                         <td>
                             <a href="<?= $base ?>/edit/<?= $user['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
                             <a href="<?= $base ?>/delete/<?= $user['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza?')">Excluir</a>
