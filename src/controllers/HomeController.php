@@ -21,9 +21,10 @@ class HomeController extends Controller
 
     public function store()
     {
+        $email = filter_input(INPUT_POST, 'email');
         $name = filter_input(INPUT_POST, 'name');
 
-        User::insert(['name' => $name])->execute();
+        User::insert(['email' => $email, 'name' => $name])->execute();
 
         $this->redirect('/');
     }
@@ -37,9 +38,10 @@ class HomeController extends Controller
 
     public function update($id)
     {
+        $email = filter_input(INPUT_POST, 'email');
         $name = filter_input(INPUT_POST, 'name');
 
-        User::update(['name' => $name])->where('id', $id)->execute();
+        User::update(['email' => $email, 'name' => $name])->where('id', $id)->execute();
 
         $this->redirect('/');
     }
