@@ -25,7 +25,7 @@ class HomeController extends Controller
         $name = filter_input(INPUT_POST, 'name');
 
         if ($email && $name) {
-            $data = User::select()->where('email', $email)->execute();
+            $data = User::select()->where('email', $email)->first();
 
             if (count($data) === 0) {
                 User::insert(['email' => $email, 'name' => $name])->execute();
@@ -49,9 +49,13 @@ class HomeController extends Controller
         $email = filter_input(INPUT_POST, 'email');
         $name = filter_input(INPUT_POST, 'name');
 
-        User::update(['email' => $email, 'name' => $name])->where('id', $id)->execute();
+        if ($email && $name) {
+            User::update(['email' => $email, 'name' => $name])->where('id', $id)->execute();
 
-        $this->redirect('/');
+            $this->redirect('/');
+        }
+
+        $this->redirect('/create');
     }
 
     public function delete($id)
