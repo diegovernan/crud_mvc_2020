@@ -24,9 +24,17 @@ class HomeController extends Controller
         $email = filter_input(INPUT_POST, 'email');
         $name = filter_input(INPUT_POST, 'name');
 
-        User::insert(['email' => $email, 'name' => $name])->execute();
+        if ($email && $name) {
+            $data = User::select()->where('email', $email)->execute();
 
-        $this->redirect('/');
+            if (count($data) === 0) {
+                User::insert(['email' => $email, 'name' => $name])->execute();
+
+                $this->redirect('/');
+            }
+        }
+
+        $this->redirect('/create');
     }
 
     public function edit($id)
