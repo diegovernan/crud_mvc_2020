@@ -36,6 +36,8 @@ class HomeController extends Controller
             }
         }
 
+        $_SESSION['info'] = 'Tente novamente!';
+
         $this->redirect('/create');
     }
 
@@ -58,6 +60,8 @@ class HomeController extends Controller
 
             $this->redirect('/');
         }
+
+        $_SESSION['info'] = 'Tente novamente!';
 
         $this->redirect('/create');
     }

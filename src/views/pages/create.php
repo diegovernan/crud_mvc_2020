@@ -3,6 +3,17 @@
 <div class="container">
     <h1 class="text-center">Criar</h1>
 
+    <?php if (!empty($_SESSION['info'])) : ?>
+        <div class="alert alert-danger alert-dismissible fade show">
+            <?= $_SESSION['info']; ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <?php $_SESSION['info'] = ''; ?>
+    <?php endif; ?>
+
     <form method="post" action="<?= $base ?>/store">
         <div class="form-group">
             <label for="email">E-mail</label>
