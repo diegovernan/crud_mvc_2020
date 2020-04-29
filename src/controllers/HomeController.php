@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $users = User::select()->execute();
+        $users = User::select()->orderBy('id', 'desc')->execute();
 
         $this->render('home', ['users' => $users]);
     }
@@ -30,7 +30,7 @@ class HomeController extends Controller
             if (count($data) === 0) {
                 User::insert(['email' => $email, 'name' => $name])->execute();
 
-                $_SESSION['info'] = 'Adicionado com sucesso!';
+                $_SESSION['info'] = 'Criado com sucesso!';
 
                 $this->redirect('/');
             }
@@ -53,6 +53,8 @@ class HomeController extends Controller
 
         if ($email && $name) {
             User::update(['email' => $email, 'name' => $name])->where('id', $id)->execute();
+
+            $_SESSION['info'] = 'Editado com sucesso!';
 
             $this->redirect('/');
         }
