@@ -3,7 +3,7 @@
 <div class="container">
     <h1 class="text-center">CRUD</h1>
 
-    <a href="<?= $base ?>/create" class="btn btn-sm btn-primary mb-2">Adicionar</a>
+    <a href="<?= $base ?>/create" class="btn btn-sm btn-primary mb-2">Criar</a>
 
     <?php if (!empty($_SESSION['info'])) : ?>
         <div class="alert alert-success alert-dismissible fade show">

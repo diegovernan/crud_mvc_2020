@@ -1,7 +1,7 @@
 <?php $render('header'); ?>
 
 <div class="container">
-    <h1 class="text-center">Adicionar</h1>
+    <h1 class="text-center">Criar</h1>
 
     <form method="post" action="<?= $base ?>/store">
         <div class="form-group">
