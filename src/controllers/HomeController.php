@@ -25,10 +25,12 @@ class HomeController extends Controller
         $name = filter_input(INPUT_POST, 'name');
 
         if ($email && $name) {
-            $data = User::select()->where('email', $email)->first();
+            $data = User::select()->where('email', $email)->execute();
 
             if (count($data) === 0) {
                 User::insert(['email' => $email, 'name' => $name])->execute();
+
+                $_SESSION['info'] = 'Adicionado com sucesso!';
 
                 $this->redirect('/');
             }

@@ -5,6 +5,17 @@
 
     <a href="<?= $base ?>/create" class="btn btn-sm btn-primary mb-2">Adicionar</a>
 
+    <?php if (!empty($_SESSION['info'])) : ?>
+        <div class="alert alert-success alert-dismissible fade show">
+            <?= $_SESSION['info']; ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <?php $_SESSION['info'] = ''; ?>
+    <?php endif; ?>
+
     <table class="table table-sm table-striped" id="table">
         <thead>
             <tr>
