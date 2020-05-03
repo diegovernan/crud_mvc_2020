@@ -70,6 +70,8 @@ class HomeController extends Controller
     {
         User::delete()->where('id', $id)->execute();
 
+        $_SESSION['info'] = 'Excluído com sucesso!';
+
         $this->redirect('/');
     }
 
