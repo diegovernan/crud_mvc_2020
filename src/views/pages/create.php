@@ -4,12 +4,16 @@
     <h1 class="text-center">Criar</h1>
 
     <?php if (!empty($_SESSION['info'])) : ?>
-        <div class="alert alert-danger alert-dismissible fade show">
-            <?= $_SESSION['info']; ?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+        <script type="text/javascript">
+            swal({
+                html: jQuery(".alert").html(),
+                type: 'error',
+                title: 'Erro!',
+                text: '<?= $_SESSION['info']; ?>',
+            }).then((value) => {
+                //location.reload();
+            }).catch(swal.noop);
+        </script>
 
         <?php $_SESSION['info'] = ''; ?>
     <?php endif; ?>
