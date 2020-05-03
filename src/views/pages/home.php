@@ -20,7 +20,7 @@
         <?php $_SESSION['info'] = ''; ?>
     <?php endif; ?>
 
-    <table class="table table-sm table-striped" id="table">
+    <table class="table table-sm table-striped table-bordered">
         <thead>
             <tr>
                 <th>ID</th>
