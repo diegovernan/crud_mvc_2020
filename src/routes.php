@@ -13,6 +13,3 @@ $router->get('/edit/{id}', 'HomeController@edit');
 $router->post('/update/{id}', 'HomeController@update');
 
 $router->get('/delete/{id}', 'HomeController@delete');
-
-$router->get('/about', 'HomeController@about');
-$router->get('/user/{id}', 'HomeController@edit');

@@ -74,9 +74,4 @@ class HomeController extends Controller
 
         $this->redirect('/');
     }
-
-    public function about()
-    {
-        $this->render('about');
-    }
 }
