@@ -6,12 +6,16 @@
     <a href="<?= $base ?>/create" class="btn btn-sm btn-primary mb-2">Criar</a>
 
     <?php if (!empty($_SESSION['info'])) : ?>
-        <div class="alert alert-success alert-dismissible fade show">
-            <?= $_SESSION['info']; ?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+        <script type="text/javascript">
+            swal({
+                html: jQuery(".alert").html(),
+                type: 'success',
+                title: 'Sucesso!',
+                text: '<?= $_SESSION['info']; ?>',
+            }).then((value) => {
+                //location.reload();
+            }).catch(swal.noop);
+        </script>
 
         <?php $_SESSION['info'] = ''; ?>
     <?php endif; ?>
