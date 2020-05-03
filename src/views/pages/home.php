@@ -52,4 +52,10 @@
     </table>
 </div>
 
+<script>
+    $(document).ready(function() {
+        $('.table').DataTable();
+    });
+</script>
+
 <?php $render('footer'); ?>
