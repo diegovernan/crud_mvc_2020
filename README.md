@@ -27,3 +27,7 @@ Configurar arquivo `src/Config.php`
 Acessar `localhost/crud-mvc-2020/public`
 
 > Documentação da Query Builder [aqui](https://github.com/ClanCats/Hydrahon)
+
+> MVC 2020 sem sistema de login [aqui](https://github.com/diegovernan/mvc_2020)
+
+> MVC 2020 com sistema de login [aqui](https://github.com/diegovernan/login_mvc_2020)
